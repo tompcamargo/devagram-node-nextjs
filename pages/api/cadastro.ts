@@ -38,7 +38,7 @@ const handler = nc()
                 nome: usuario.nome,
                 email: usuario.email,
                 senha: md5(usuario.senha),
-                avatar: image?.image?.url
+                avatar: image?.media?.url
             }
             await UsuarioModel.create(usuarioASerSalvo);
             return res.status(200).json({msg : 'Usuario criado com sucesso'})
